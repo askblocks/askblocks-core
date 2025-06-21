@@ -2,8 +2,12 @@
   "name": "askblocks-core",
   "main": "src/index.js",
   "compatibility_date": "2025-06-11",
-  "workers_dev": true,
   "dev": {
     "port": 8000
+  },
+  "build": {
+    "upload": {
+      "format": "modules"
+    }
   }
 }
