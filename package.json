@@ -17,7 +17,8 @@
     "lint": "eslint src --ext .js && echo \"✅ Lint passed with no issues.\"",
     "dev": "wrangler dev --port 8000",
     "prepare": "husky",
-    "postinstall": "npm run prepare"
+    "postinstall": "npm run prepare",
+    "test": "npm run lint"
   },
   "lint-staged": {
     "src/**/*.js": "eslint"
