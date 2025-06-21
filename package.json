@@ -9,11 +9,15 @@
     "@eslint/js": "^9.29.0",
     "eslint": "^9.29.0",
     "globals": "^16.2.0",
+    "husky": "^9.1.7",
+    "lint-staged": "^16.1.2",
     "wrangler": "^4.20.5"
   },
   "scripts": {
     "lint": "eslint src --ext .js && echo \"✅ Lint passed with no issues.\"",
-    "dev": "wrangler dev --port 8000"
+    "dev": "wrangler dev --port 8000",
+    "prepare": "husky install",
+    "postinstall": "npm run prepare"
   },
   "lint-staged": {
     "src/**/*.js": "eslint"
