@@ -1,0 +1,15 @@
+# Node modules
+node_modules/
+
+# Cloudflare Wrangler cache
+.wrangler/
+
+# Local environment files
+.env
+.env.local
+
+# macOS system files
+.DS_Store
+
+# VSCode settings
+.vscode/
