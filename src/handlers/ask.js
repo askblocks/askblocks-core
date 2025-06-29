@@ -1,7 +1,20 @@
 export async function handleAsk(request, env) {
+  let prompt;
   try {
-    const { prompt } = await request.json();
+    const body = await request.json();
+    prompt = body.prompt;
+    if (!prompt) {
+      throw new Error('Missing prompt');
+    }
+  } catch (err) {
+    console.error('Error parsing JSON:', err);
+    return new Response(
+      JSON.stringify({ error: 'Invalid JSON or missing prompt' }),
+      { status: 400, headers: { 'Content-Type': 'application/json' } }
+    );
+  }
 
+  try {
     const groqRes = await fetch('https://api.groq.com/openai/v1/chat/completions', {
       method: 'POST',
       headers: {
