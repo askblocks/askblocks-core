@@ -1,6 +1,6 @@
 {
   "name": "@askblocks/core",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "Core engine for Askblocks widgets",
   "main": "index.js",
   "author": "sxian1232",
