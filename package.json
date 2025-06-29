@@ -22,7 +22,8 @@
     "prepare": "husky",
     "postinstall": "npm run prepare",
     "jest": "node --experimental-vm-modules node_modules/.bin/jest",
-    "test": "npm run lint && npm run jest"
+    "test": "npm run lint && npm run jest",
+    "sync": "bash scripts/sync-fork.sh"
   },
   "lint-staged": {
     "src/**/*.js": "eslint"
