@@ -3,7 +3,7 @@ import { handleHealth } from './handlers/health.js';
 import { rateLimit } from './lib/rateLimiter.js';
 
 export default {
-  async fetch(request) {
+  async fetch(request, env) {
     const { pathname } = new URL(request.url);
 
     if (request.method === 'POST' && pathname === '/ask') {
@@ -12,7 +12,7 @@ export default {
         return limited;
       }
 
-      return handleAsk(request);
+      return handleAsk(request, env);
     }
 
     if (request.method === 'GET' && pathname === '/health') {
