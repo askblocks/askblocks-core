@@ -25,5 +25,5 @@ jobs:
     - name: Run tests (actually lint)
       run: npm test
 
-    - name: Validate Wrangler config
-      run: npx wrangler validate
+    - name: Validate Wrangler build
+      run: npx wrangler build
